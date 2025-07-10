@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letterverse 💌</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>LETTERVERSE</h1>
+    <h3>Send letters to your future self</h3>
+
+    <form action="/" method="POST">
+      <textarea name="message" required>Dear Me,</textarea>
+      <input type="email" name="email" placeholder="Your email" required>
+      <input type="date" name="send_date" required>
+      <button type="submit">Send to Future ✨</button>
+    </form>
+
+    {% if message %}
+      <div class="confirmation">✅ {{ message }}</div>
+    {% endif %}
+  </div>
+</body>
+</html>
